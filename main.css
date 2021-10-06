@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.inner {
+  width: 70%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+header {
+  background-color: orange;
+  height: 150px;
+  /* position: fixed;
+  top: 0; */
+}
+header .inner {
+  position: relative;
+  height: 100%;
+}
+header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+}
+
+header .sub-menu{
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+}
+header .sub-menu a{
+  padding-top: 7px;
+  color: beige;
+  text-transform: capitalize;
+}
+header .sub-menu a::after{
+  content: "|";
+  padding: 0 10px;
+}
+header .sub-menu a:last-of-type::after{
+  content: "";
+}
+header .sub-menu .search input{
+  width: 36px;
+  height: 34px;
+}
+
+header .main-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+}
+header .main-menu > div {
+  padding: 10px 10px 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+header .main-menu > div:hover {
+  background-color: royalblue
+}
+
+header .dropdown {
+  position: fixed;
+  top: 150px;
+  width: 100%;
+  visibility: hidden;
+}
+/* 허버해서보이려면 하위거나 형제거나해야함 상위레벨이나 
+아예다른데에있는거 건드리려면 자스해야함 선택자로 선택을못함  */
+header .dropdown > div:first-of-type {
+  background-color: royalblue;
+}
+header .dropdown > div:first-of-type .inner {
+  padding: 20px 0;
+  display: flex;
+}
+header .dropdown > div:first-of-type ul {
+  width: 200px;
+}
+header .dropdown > div:last-of-type {
+  background-image: url('./images/main_menu_pattern.jpg');
+  color: #fff;
+  padding: 20px 0;
+}
