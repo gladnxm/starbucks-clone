@@ -1,26 +1,36 @@
-const coffeeMainMenuEl = document.querySelector(".main-menu .coffee")
-const coffeeDropdownEl = document.querySelector(".coffee.dropdown")
+const coffeeMainMenuEl = document.querySelector(".main-menu .coffee");
+const coffeeDropdownEl = document.querySelector(".coffee.dropdown");
 function coffee_dropdown_show() {
-  coffeeDropdownEl.style.visibility="visible"
+  coffeeDropdownEl.style.visibility="visible";
 }
 function coffee_dropdown_hide() {
-  coffeeDropdownEl.style.visibility="hidden"
+  coffeeDropdownEl.style.visibility="hidden";
 }
 
-const menuMainMenuEl = document.querySelector(".main-menu .menu")
-const menuDropdownEl = document.querySelector(".menu.dropdown")
+const menuMainMenuEl = document.querySelector(".main-menu .menu");
+const menuDropdownEl = document.querySelector(".menu.dropdown");
 function menu_dropdown_show() {
-  menuDropdownEl.style.visibility="visible"
+  menuDropdownEl.style.visibility="visible";
 }
 function menu_dropdown_hide() {
-  menuDropdownEl.style.visibility="hidden"
+  menuDropdownEl.style.visibility="hidden";
 }
 
-const storeMainMenuEl = document.querySelector(".main-menu .store")
-const storeDropdownEl = document.querySelector(".store.dropdown")
+const storeMainMenuEl = document.querySelector(".main-menu .store");
+const storeDropdownEl = document.querySelector(".store.dropdown");
 function store_dropdown_show() {
-  storeDropdownEl.style.visibility="visible"
+  storeDropdownEl.style.visibility="visible";
 }
 function store_dropdown_hide() {
-  storeDropdownEl.style.visibility="hidden"
+  storeDropdownEl.style.visibility="hidden";
 }
+
+
+// 검색창 
+const searchEl = document.querySelector(".search input");
+searchEl.addEventListener('focus', function() {
+  searchEl.setAttribute("placeholder", "통합검색");
+}) 
+searchEl.addEventListener('blur', function() {
+  searchEl.setAttribute("placeholder", "");
+}) 
