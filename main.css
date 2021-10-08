@@ -87,22 +87,28 @@ header .main-menu {
   text-transform: uppercase;
   font-size: 13px;
 }
-header .main-menu li {
+header .main-menu .menu-name {
   padding: 10px 15px 30px;
   border-radius: 5px 5px 0 0;
   color: #333;
 }
-header .main-menu li:hover {
+header .main-menu li:hover .menu-name{
   background-color: #333;
   color: #669900;
 }
+header .main-menu .menu-name:hover + .dropdown,
+header .dropdown:hover {
+  display: block;
+}
+
 
 /* 드랍다운의 1번째 블럭 */
 header .dropdown {
   position: fixed;
   top: 110px;
+  left: 0;
   width: 100%;
-  visibility: hidden;
+  display: none;
   z-index: 5;
 }
 header .dropdown > div:first-of-type {
