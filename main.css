@@ -5,7 +5,9 @@
 }
 .inner {
   width: 73%;
+  height: 100%;
   margin: auto;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -13,6 +15,53 @@ a {
 body {
   height: 3000px;
 }
+.btn {
+  display: block;
+  width: 130px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  transition: .4s;
+}
+.btn:hover,
+.btn.btn--reverse {
+  color: #fff;
+  background-color: #333;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent; /*투명함*/
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592b18;
+}
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
+
 
 /* 헤더 영역 */
 header {
@@ -23,10 +72,6 @@ header {
   top: 0;
   z-index: 1;
 }
-header .inner {
-  position: relative;
-  height: 100%;
-}
 header img {
   position: absolute;
   left: 0;
@@ -36,7 +81,8 @@ header img {
   width: 70px;
 }
 
-/* 서브 메뉴 네비바 */
+
+/* 서브 메뉴 */
 header .sub-menu {
   position: absolute;
   display: flex;
@@ -79,7 +125,7 @@ header .sub-menu .search input:focus {
   border-color: #669900;
 }
 
-/* 메인 메뉴 네비바*/
+/* 메인 메뉴 */
 header .main-menu {
   display: flex;
   position: absolute;
@@ -103,7 +149,7 @@ header .dropdown:hover {
 }
 
 
-/* 드랍다운의 1번째 블럭 */
+/* 드랍다운 전체와 1번째 블럭 */
 header .dropdown {
   position: fixed;
   top: 110px;
@@ -158,6 +204,7 @@ header .dropdown .text p {
   color: #669900;
 }
 
+
 /* 우측 배지 */
 .badges {
   position: fixed;
@@ -169,4 +216,43 @@ header .dropdown .text p {
   margin-bottom: 10px;
   border-radius: 7px;
   cursor: pointer;
+}
+
+
+/* visual section */
+#visual {
+  height: 646px;
+  background-image: url('images/visual_bg.jpg');
+  background-position: center;
+}
+#visual .inner * {
+  position: absolute;
+}
+#visual .title {
+  top: 88px;
+  left: -10px;
+}
+#visual .title .btn {
+  top: 260px;
+  left: 172px;
+}
+#visual .cup1.image {
+  bottom: 0;
+  right: -47px;
+}
+#visual .cup1.text {
+  top: 38px;
+  right: 171px;
+}
+#visual .cup2.image {
+  bottom: 0;
+  right: 162px;
+}
+#visual .cup2.text {
+  top: 321px;
+  right: 416px;
+}
+#visual .spoon {
+  bottom: 0;
+  left: 275px;
 }
