@@ -21,6 +21,7 @@ header {
   height: 110px;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 header .inner {
   position: relative;
@@ -88,7 +89,7 @@ header .main-menu {
   font-size: 13px;
 }
 header .main-menu .menu-name {
-  padding: 10px 15px 30px;
+  padding: 10px 15px 25px;
   border-radius: 5px 5px 0 0;
   color: #333;
 }
@@ -109,7 +110,6 @@ header .dropdown {
   left: 0;
   width: 100%;
   display: none;
-  z-index: 5;
 }
 header .dropdown > div:first-of-type {
   background-color: #333;
@@ -168,4 +168,5 @@ header .dropdown .text p {
   display: block;
   margin-bottom: 10px;
   border-radius: 7px;
+  cursor: pointer;
 }
