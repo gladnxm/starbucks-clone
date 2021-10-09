@@ -1,0 +1,36 @@
+/* notice section*/
+#notice {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, #333 56%, #f6f5f0 44% );
+}
+#notice :is(.inner, .left, .right) {
+  display: flex;
+}
+#notice h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+#notice i {
+  font-size: 28px;
+}
+#notice .swiper {
+  width: 470px;
+  height: 100%;
+  background-color: orange;
+}
+#notice :is(.left, .right) {
+  height: 100%;
+  align-items: center;
+}
+#notice .left {
+  width: 60%;
+  color: #fff;
+  gap: 30px;
+}
+#notice .right {
+  width: 40%;
+  color: #333;
+  justify-content: flex-end;
+  gap: 20px;
+}

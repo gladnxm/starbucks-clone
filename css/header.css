@@ -1,0 +1,96 @@
+/* 헤더 영역 */
+header {
+  background-color: #f6f5f0;
+  width: 100%;
+  height: 110px;
+  position: sticky;
+  /* position: fixed; */
+  top: 0;
+  z-index: 1;
+}
+header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70px;
+}
+
+/* 서브 메뉴 */
+header .sub-menu {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 0;
+  font-size: 12px;
+}
+header .sub-menu li {
+  padding-top: 8px;
+}
+header .sub-menu li:last-of-type {
+  padding-top: 0;
+}
+header .sub-menu a {
+  text-transform: capitalize;
+  color: #656565;
+}
+header .sub-menu li::before {
+  content: "|";
+  color: #e5e5e5;
+  padding: 0 10px;
+}
+header .sub-menu li:first-of-type::before,
+header .sub-menu li:last-of-type::before {
+  content: "";
+  padding: 0 7px;
+}
+header .sub-menu .search {
+  position: relative;
+}
+header .sub-menu input {
+  width: 32px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  outline: none;
+  transition: .4s;
+  padding-left: 7px;
+  font-size: 11px;
+}
+header .sub-menu input:focus {
+  width: 160px;
+  border-color: #669900;
+}
+header .sub-menu .material-icons {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  transition: .4s;
+}
+header .sub-menu input:focus + .material-icons {
+  opacity: 0;
+}
+
+/* 메인 메뉴 */
+header .main-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+header .main-menu .menu-name {
+  padding: 10px 15px 25px;
+  border-radius: 5px 5px 0 0;
+  color: #333;
+}
+header .main-menu li:hover .menu-name{
+  background-color: #333;
+  color: #669900;
+}
+header .main-menu .menu-name:hover + .dropdown,
+header .dropdown:hover {
+  display: block;
+}

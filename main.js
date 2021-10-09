@@ -1,11 +1,15 @@
 // 검색창 
-const searchEl = document.querySelector(".search input");
-searchEl.addEventListener('focus', function() {
-  searchEl.setAttribute("placeholder", "통합검색");
-}) 
-searchEl.addEventListener('blur', function() {
-  searchEl.setAttribute("placeholder", "");
-}) 
+const searchEl = document.querySelector(".sub-menu .search");
+const inputEl = searchEl.querySelector("input");
+searchEl.addEventListener('click', function() {
+  inputEl.focus();
+});
+inputEl.addEventListener('focus', function() {
+  inputEl.setAttribute("placeholder", "통합검색");
+}); 
+inputEl.addEventListener('blur', function() {
+  inputEl.setAttribute("placeholder", "");
+}); 
 
 
 // 우측배지 스크롤 동작

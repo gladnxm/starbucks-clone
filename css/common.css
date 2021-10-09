@@ -1,0 +1,62 @@
+/* 공통 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.inner {
+  width: 73%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+/* 버튼 디자인 */
+.btn {
+  display: block;
+  width: 130px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  transition: .4s;
+}
+.btn:hover,
+.btn.btn--reverse {
+  color: #fff;
+  background-color: #333;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent; /*투명함*/
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592b18;
+}
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
