@@ -23,5 +23,19 @@ window.addEventListener('scroll', _.throttle(function() {
     gsap.to(badgeEl, .7, badgeFadeOut);
   else
     gsap.to(badgeEl, .7, badgeFadeIn);
+  //gsap.to(요소,지속시간,옵션)
 }, 200))
+
+
+// visual section의 이미지들이 순차적으로
+const fadeEls = document.querySelectorAll('#visual .fade-in');
+fadeEls.forEach(function(fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    opacity: 1,
+    delay: (index+1) * .7
+  });
+  //gsap.to(요소,지속시간,옵션)
+});
+  
+  
 
