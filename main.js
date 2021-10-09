@@ -32,10 +32,7 @@ const fadeEls = document.querySelectorAll('#visual .fade-in');
 fadeEls.forEach(function(fadeEl, index) {
   gsap.to(fadeEl, 1, {
     opacity: 1,
-    delay: (index+1) * .7
+    delay: (index+1) * .6
   });
   //gsap.to(요소,지속시간,옵션)
 });
-  
-  
-

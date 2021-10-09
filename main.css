@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 body {
-  height: 3000px;
+  height: 1000px;
 }
 .btn {
   display: block;
@@ -225,7 +225,10 @@ header .dropdown .text p {
   background-image: url('images/visual_bg.jpg');
   background-position: center;
 }
-#visual .inner * {
+#visual :is(.title, .title .btn, img) {
+/* #visual .title,
+   #visual .title .btn,
+   #visual img 와 같음 */
   position: absolute;
 }
 #visual .title {
@@ -257,5 +260,5 @@ header .dropdown .text p {
   left: 275px;
 }
 #visual .fade-in {
-  opacity: 1;
+  opacity: 0;
 }
