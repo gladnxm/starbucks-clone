@@ -1,3 +1,9 @@
+// 페이지 접속시 맨아래에서 시작하는 현상 수정
+window.onload = function() {
+  setTimeout(function() {scrollTo(0,0)}, 100);
+}
+
+
 // 검색창 
 const searchEl = document.querySelector(".sub-menu .search");
 const inputEl = searchEl.querySelector("input");
@@ -23,11 +29,11 @@ const badgeFadeOut = {
   display: 'none'
 };
 window.addEventListener('scroll', _.throttle(function() {
+  //gsap.to(요소,지속시간,옵션)
   if (window.scrollY > 500) 
     gsap.to(badgeEl, .7, badgeFadeOut);
   else
     gsap.to(badgeEl, .7, badgeFadeIn);
-  //gsap.to(요소,지속시간,옵션)
 }, 200))
 
 
@@ -47,4 +53,19 @@ new Swiper('#notice .swiper-container', {
   direction: 'vertical',
   autoplay: true,
   loop: true
+});
+new Swiper('#promotion .swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: { delay: 3500 },
+  pagination: {
+    el: '#promotion .swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    prevEl: '#promotion .swiper-prev',
+    nextEl: '#promotion .swiper-next'
+  }
 });

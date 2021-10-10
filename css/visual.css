@@ -5,9 +5,9 @@
   background-position: center;
 }
 /* #visual .title,
-   #visual .title .btn,
+   #visual .btn,
    #visual img 와 같음 */
-#visual :is(.title, .title .btn, img) { position: absolute; }
+#visual :is(.title, .btn, img) { position: absolute; }
 #visual .title      { top: 88px;  left: -10px; }
 #visual .title .btn { top: 260px; left: 172px; }
 #visual .cup1.image { bottom: 0;  right: -47px; }
