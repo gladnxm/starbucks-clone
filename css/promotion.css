@@ -3,6 +3,11 @@
   background-color: #f6f5f0;
   padding: 40px 0;
   overflow: hidden;
+  transition: .4s;
+}
+#promotion.hide {
+  height: 0;
+  padding: 0;
 }
 #promotion .swiper-container {
   width: calc(820px*3 + 20px); /* 이미지가로 820 여백 10 10 */

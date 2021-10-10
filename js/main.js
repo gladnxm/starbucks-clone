@@ -1,4 +1,4 @@
-// 페이지 접속시 맨아래에서 시작하는 현상 수정
+// 페이지 접속시 맨아래에서 시작하는 현상 강제로 수정
 window.onload = function() {
   setTimeout(function() {scrollTo(0,0)}, 100);
 }
@@ -49,12 +49,12 @@ fadeEls.forEach(function(fadeEl, index) {
 
 
 // Swiper(선택자, 옵션)
-new Swiper('#notice .swiper-container', {
+new Swiper('#notice .swiper-container', { //공지사항의 스와이퍼
   direction: 'vertical',
   autoplay: true,
-  loop: true
-});
-new Swiper('#promotion .swiper-container', {
+  loop: true 
+}); 
+new Swiper('#promotion .swiper-container', { // 프로모션의 스와이퍼
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
@@ -67,5 +67,22 @@ new Swiper('#promotion .swiper-container', {
   navigation: {
     prevEl: '#promotion .swiper-prev',
     nextEl: '#promotion .swiper-next'
+  } 
+}); 
+
+
+// notice의 화살표 아이콘으로 promotion 토글 제어
+const promotionEl = document.querySelector('#promotion');
+const toggleIcon = document.querySelector('#notice .right i');
+let isHide = false // 처음엔 숨겨지지않음 보여짐
+toggleIcon.addEventListener('click', function() {
+  isHide = !isHide
+  if (isHide) {
+    promotionEl.classList.add('hide');
+    toggleIcon.textContent = 'get_app';
+  } // material icon이라 태그 안에 적힌 이름만 바꿔주면 아이콘 바뀜
+  else {
+    promotionEl.classList.remove('hide');
+    toggleIcon.textContent = 'upload';
   }
 });
