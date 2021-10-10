@@ -80,7 +80,7 @@ toggleIcon.addEventListener('click', function() {
   if (isHide) {
     promotionEl.classList.add('hide');
     toggleIcon.textContent = 'get_app';
-  } // material icon이라 태그 안에 적힌 이름만 바꿔주면 아이콘 바뀜
+  } // material icon이라 태그 안에 적힌 텍스트(아이콘 이름)만 바꿔주면 아이콘 바뀜
   else {
     promotionEl.classList.remove('hide');
     toggleIcon.textContent = 'upload';
