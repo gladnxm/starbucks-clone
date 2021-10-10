@@ -40,3 +40,11 @@ fadeEls.forEach(function(fadeEl, index) {
   });
   //gsap.to(요소,지속시간,옵션)
 });
+
+
+// Swiper(선택자, 옵션)
+new Swiper('#notice .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true
+});

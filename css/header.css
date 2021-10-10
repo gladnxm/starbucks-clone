@@ -17,6 +17,7 @@ header img {
   width: 70px;
 }
 
+
 /* 서브 메뉴 */
 header .sub-menu {
   position: absolute;
@@ -71,6 +72,7 @@ header .sub-menu .material-icons {
 header .sub-menu input:focus + .material-icons {
   opacity: 0;
 }
+
 
 /* 메인 메뉴 */
 header .main-menu {

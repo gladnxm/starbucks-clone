@@ -2,10 +2,12 @@
 #notice {
   width: 100%;
   height: 60px;
-  background: linear-gradient(90deg, #333 56%, #f6f5f0 44% );
+  background: linear-gradient(90deg, #333 56%, #f6f5f0 44%);
 }
-#notice :is(.inner, .left, .right) {
+#notice :is(.inner, .left, .swiper-slide, .right) {
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 #notice h3 {
   font-size: 17px;
@@ -14,14 +16,13 @@
 #notice i {
   font-size: 28px;
 }
-#notice .swiper {
+#notice .swiper-container {
   width: 470px;
   height: 100%;
-  background-color: orange;
+  overflow: hidden;
 }
-#notice :is(.left, .right) {
-  height: 100%;
-  align-items: center;
+#notice .swiper-container a {
+  color: #fff;
 }
 #notice .left {
   width: 60%;

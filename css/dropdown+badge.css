@@ -32,6 +32,7 @@ header .dropdown > div:first-of-type .inner {
   display: flex;
 }
 
+
 /* 드랍다운의 2번째 블럭 */
 header .dropdown > div:last-of-type {
   background-image: url("/images/main_menu_pattern.jpg");
@@ -52,6 +53,7 @@ header .dropdown .text h4 {
 header .dropdown .text p {
   color: #669900;
 }
+
 
 /* 우측 배지 */
 .badges {

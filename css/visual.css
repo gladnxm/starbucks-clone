@@ -4,12 +4,10 @@
   background-image: url('/images/visual_bg.jpg');
   background-position: center;
 }
-#visual :is(.title, .title .btn, img) {
 /* #visual .title,
    #visual .title .btn,
    #visual img 와 같음 */
-  position: absolute;
-}
+#visual :is(.title, .title .btn, img) { position: absolute; }
 #visual .title      { top: 88px;  left: -10px; }
 #visual .title .btn { top: 260px; left: 172px; }
 #visual .cup1.image { bottom: 0;  right: -47px; }
