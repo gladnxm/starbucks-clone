@@ -1,0 +1,56 @@
+/* 두 섹션의 배경 공통점 */
+#pick-your-favorite,
+#reserve-store {
+  background-size: cover; /* 넓은너비에 맞춰서 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 요소가 스크롤되어도 딸려올라가지 않고 고정*/
+}
+
+
+/* pick-your-favorite section */
+#pick-your-favorite {
+  background-image: url('/images/favorite_bg.jpg');
+}
+#pick-your-favorite .text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+  width: 370px;
+  padding: 100px 0;
+  transform: translateX(80px);
+}
+
+
+/* reserve-store section */
+#reserve-store {
+  height: 600px;
+  background-image: url('/images/reserve_store_bg.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 500px;
+}
+#reserve-store .medal :is(.front, .back) {
+  transition: 1s;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#reserve-store .back .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: auto;
+}
+#reserve-store .medal .front       { transform: rotateY(0deg); }
+#reserve-store .medal:hover .front { transform: rotateY(180deg); }
+#reserve-store .medal .back        { transform: rotateY(-180deg); }
+#reserve-store .medal:hover .back  { transform: rotateY(0deg); }

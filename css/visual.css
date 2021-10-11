@@ -4,9 +4,6 @@
   background-image: url('/images/visual_bg.jpg');
   background-position: center;
 }
-/* #visual .title,
-   #visual .btn,
-   #visual img 와 같음 */
 #visual :is(.title, .btn, img) { position: absolute; }
 #visual .title      { top: 88px;  left: -10px; }
 #visual .title .btn { top: 260px; left: 172px; }

@@ -14,7 +14,7 @@ header .dropdown > div:first-of-type ul {
   width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 header .dropdown > div:first-of-type h4 {
   color: #fff;
@@ -38,7 +38,7 @@ header .dropdown > div:last-of-type {
   background-image: url("/images/main_menu_pattern.jpg");
   color: #fff;
   padding: 25px 0;
-  font-size: 11px;
+  font-size: 12px;
 }
 header .dropdown > div:last-of-type .inner {
   display: flex;
@@ -47,8 +47,8 @@ header .dropdown > div:last-of-type .inner {
 }
 header .dropdown .text h4 {
   font-weight: 700;
-  color: #656565;
-  margin-bottom: 10px;
+  color: #999;
+  margin-bottom: 5px;
 }
 header .dropdown .text p {
   color: #669900;

@@ -48,10 +48,13 @@ header .sub-menu li:last-of-type::before {
 header .sub-menu .search {
   position: relative;
 }
+
+
+/* 서브 메뉴의 검색창 */
 header .sub-menu input {
-  width: 32px;
-  height: 30px;
-  border: 1px solid #e5e5e5;
+  width: 36px;
+  height: 34px;
+  border: 1px solid #c0c0c0;
   border-radius: 5px;
   outline: none;
   transition: .4s;
@@ -64,8 +67,8 @@ header .sub-menu input:focus {
 }
 header .sub-menu .material-icons {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 5px;
+  right: 5px;
   transition: .4s;
 }
 header .sub-menu input:focus + .material-icons {
@@ -79,12 +82,12 @@ header .main-menu {
   position: absolute;
   right: 0;
   bottom: 0;
-  text-transform: uppercase;
   font-size: 14px;
 }
 header .main-menu .menu-name {
   padding: 10px 15px 25px;
   border-radius: 5px 5px 0 0;
+  text-transform: uppercase;
   color: #333;
 }
 header .main-menu li:hover .menu-name{

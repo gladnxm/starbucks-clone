@@ -30,6 +30,7 @@
   margin: auto;
 }
 
+
 /* 페이지네이션 */
 #promotion .swiper-pagination {
   /* 페이지네이션은 position absolute가 라이브러리에 이미있음*/
@@ -45,6 +46,7 @@
 #promotion .swiper-pagination-bullet-active {
   background-image: url('/images/promotion_slide_pager_on.png');
 }
+
 
 /* 좌우 버튼 */
 #promotion :is(.swiper-prev, .swiper-next) {

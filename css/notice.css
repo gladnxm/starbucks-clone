@@ -13,8 +13,7 @@
   font-weight: 700;
 }
 #notice i {
-  padding: 8px; 
-  /* 토글 아이콘 살짝 주변을 눌러도 되게하려고 */
+  padding: 8px; /* 아이콘 살짝 주변을 눌러도 토글 되게하려고 */
   font-size: 28px;
 }
 #notice .swiper-container {
