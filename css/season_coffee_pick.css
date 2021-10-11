@@ -1,0 +1,63 @@
+/* season-product section */
+#season-product {
+  height: 400px;
+  background-image: url('/images/season_product_bg.jpg');
+}
+#season-product .floating {
+  position: absolute;
+  top: -200px;
+  right: -20px;
+}
+#season-product .text-group {
+  position: absolute;
+  top: 120px;
+  right: 90px;
+}
+#season-product .text-group img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/* reserve-coffee section */
+#reserve-coffee {
+  height: 400px;
+  background-image: url('/images/reserve_bg.jpg');
+}
+#reserve-coffee img:first-child {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+#reserve-coffee .text-group {
+  position: absolute;
+  top: 0;
+  left: 210px;
+}
+#reserve-coffee .text-group .btn {
+  transform: translateY(230px);
+}
+#reserve-coffee img:last-child {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+
+
+/* pick-your-favorite section */
+#pick-your-favorite {
+  background-image: url('/images/favorite_bg.jpg');
+  background-size: cover; /* 넓은너비에 맞춰서 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 요소가 스크롤되어도 딸려올라가지 않고 고정*/
+}
+#pick-your-favorite .text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+  width: 370px;
+  padding: 100px 0;
+  transform: translateX(80px);
+}

@@ -14,16 +14,16 @@ header .dropdown > div:first-of-type ul {
   width: 200px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 header .dropdown > div:first-of-type h4 {
   color: #fff;
-  font-size: 13px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 7px;
 }
 header .dropdown > div:first-of-type li {
-  color: #656565;
-  font-size: 12px;
+  color: #999;
+  font-size: 13px;
 }
 header .dropdown > div:first-of-type li:hover {
   color: #669900;
@@ -56,12 +56,12 @@ header .dropdown .text p {
 
 
 /* 우측 배지 */
-.badges {
+#badges {
   position: fixed;
   right: 10px;
   top: 150px;
 }
-.badges img {
+#badges img {
   display: block;
   margin-bottom: 10px;
   border-radius: 7px;
