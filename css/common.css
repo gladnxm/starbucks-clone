@@ -12,6 +12,9 @@
 a {
   text-decoration: none;
 }
+body {
+  height: 3000px;
+}
 
 
 /* 버튼 디자인 */

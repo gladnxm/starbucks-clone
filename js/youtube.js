@@ -1,5 +1,4 @@
 let tag = document.createElement('script');
-
 tag.src = "https://www.youtube.com/iframe_api";
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -18,3 +17,29 @@ function onYouTubeIframeAPIReady() { // 라이브러리 내장함수라 이름�
     }
   });
 }
+
+
+// 동그라미3개 애니메이션 
+function random(min, max) { 
+  // 범위 랜덤 함수(소수점 2자리까지)
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
+function floatingObject(selector, delay, range) {
+  // gsap.to(요소 시간 옵션)
+  gsap.to(
+    selector,
+    random(1.5, 2.5),
+    {
+      y: range,
+      repeat: -1, // 무한반복
+      yoyo: true,
+      ease: Power1.easeInOut,
+      delay: random(0, delay)
+    }
+  );
+}
+floatingObject('.floating:nth-of-type(1)', 1, 15);
+floatingObject('.floating:nth-of-type(2)', .5, 15);
+floatingObject('.floating:nth-of-type(3)', 1.5, 20);

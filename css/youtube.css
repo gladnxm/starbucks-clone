@@ -17,3 +17,19 @@
   margin: auto;
   transform: scale(1.4);
 }
+#youtube .floating {
+  position: absolute;
+  z-index: 2;
+}
+#youtube .floating:nth-of-type(1) {
+  top: 50px;
+  left: 200px;
+}
+#youtube .floating:nth-of-type(2) {
+  top: 350px;
+  left: 350px;
+}
+#youtube .floating:nth-of-type(3) {
+  bottom: -200px;
+  right: 200px;
+}
