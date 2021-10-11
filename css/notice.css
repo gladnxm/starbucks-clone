@@ -1,6 +1,5 @@
 /* notice section*/
 #notice {
-  width: 100%;
   height: 60px;
   background: linear-gradient(90deg, #333 56%, #f6f5f0 44%);
 }
@@ -15,7 +14,7 @@
 }
 #notice i {
   padding: 8px; 
-  /* 토글 기능 아이콘 살짝 주변을 눌러도 되게하려고 */
+  /* 토글 아이콘 살짝 주변을 눌러도 되게하려고 */
   font-size: 28px;
 }
 #notice .swiper-container {

@@ -76,7 +76,7 @@ const promotionEl = document.querySelector('#promotion');
 const toggleIcon = document.querySelector('#notice .right i');
 let isHide = false // 처음엔 숨겨지지않음 보여짐
 toggleIcon.addEventListener('click', function() {
-  isHide = !isHide
+  isHide = !isHide;
   if (isHide) {
     promotionEl.classList.add('hide');
     toggleIcon.textContent = 'get_app';
