@@ -1,9 +1,9 @@
 footer {
   background-color: #272727;
+  font-size: 13px;
+  padding: 50px 0;
   border-top: 1px solid #333;
   text-align: center;
-  padding: 50px 0;
-  font-size: 13px;
 }
 footer .menu li {
   display: inline-block;
@@ -33,7 +33,7 @@ footer .btn-group {
   margin-bottom: 30px;
 }
 footer .btn {
-  font-size: 13px;
+  font-size: inherit;
 }
 footer .info {
   color: #999;
@@ -47,7 +47,4 @@ footer .copyright {
   font-size: 14px;
   margin-bottom: 30px;
   text-transform: capitalize;
-}
-footer .this-year {
-  
 }

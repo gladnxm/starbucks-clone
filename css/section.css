@@ -142,8 +142,7 @@
 
 /*  08 pick-your-favorite section  */
 #pick-your-favorite {
-  background: cover fixed center no-repeat url('/images/favorite_bg.jpg');
-  /* 넓은너비에 맞추고 요소가 스크롤되어도 딸려올라가지 않고 고정 */
+  background-image: url('/images/favorite_bg.jpg');
 }
 #pick-your-favorite .text-group {
   display: flex;
@@ -155,10 +154,19 @@
   transform: translateX(80px);
 }
 
+/* 08 09 섹션 배경 공통점 */
+#pick-your-favorite,
+#reserve-store {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* 넓은너비에 맞추고 요소가 스크롤되어도 딸려올라가지 않고 고정 */
+}
 
 /*  09 reserve-store section  */
 #reserve-store {
-  background: cover fixed center no-repeat url('/images/reserve_store_bg.jpg');
+  background-image: url('/images/reserve_store_bg.jpg');
   height: 600px;
   display: flex;
   justify-content: center;

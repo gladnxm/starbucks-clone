@@ -18,18 +18,28 @@ inputEl.addEventListener('blur', function() {
 }); 
 
 
-// 우측배지 스크롤 동작
-const badgeEl = document.querySelector('#badges');
-const badgeFadeIn = {
+
+// 우측배지와 위로가기버튼 등장을 같이 컨트롤
+toTopButton = document.querySelector('#to-top');
+toTopButton.addEventListener('click', function() {
+  gsap.to(window, .7, { scrollTo: 0 });
+});
+const fadeIn = {
   opacity: 1,
   display: 'block'
 };
-const badgeFadeOut = {
+const fadeOut = {
   opacity: 0,
   display: 'none'
 };
 window.addEventListener('scroll', _.throttle(function() {
-  gsap.to(badgeEl, .7, (window.scrollY > 500) ? badgeFadeOut : badgeFadeIn)
+  if (window.scrollY > 500) {
+    gsap.to('#badges', .6, fadeOut);
+    gsap.to(toTopButton, .3, fadeIn);
+  } else {
+    gsap.to('#badges', .6, fadeIn);
+    gsap.to(toTopButton, .3, fadeOut);
+  }
 }, 200))
 
 
@@ -66,10 +76,15 @@ toggleIcon.addEventListener('click', function() {
 const spyEls = document.querySelectorAll('section.scroll-spy');
 spyEls.forEach(function(spyEl) {
   new ScrollMagic
-    .Scene({
-      triggerElement: spyEl,
-      triggerHook: .8
-    })
-    .setClassToggle(spyEl, 'show')// 토글할요소와 클래스이름
-    .addTo(new ScrollMagic.Controller());
+  .Scene({
+    triggerElement: spyEl,
+    triggerHook: .8
+  })
+  .setClassToggle(spyEl, 'show')// 토글할요소와 클래스이름
+  .addTo(new ScrollMagic.Controller());
 });
+
+
+// 푸터에 올해가 몇년인지 
+const thisYear = document.querySelector('footer .this-year');
+thisYear.textContent = new Date().getFullYear();

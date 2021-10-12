@@ -155,17 +155,3 @@ header .dropdown .text h4 {
 header .dropdown .text p {
   color: #669900;
 }
-
-
-/* 우측 배지 */
-#badges {
-  position: fixed;
-  right: 10px;
-  top: 150px;
-}
-#badges img {
-  display: block;
-  margin-bottom: 10px;
-  border-radius: 7px;
-  cursor: pointer;
-}

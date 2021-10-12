@@ -1,4 +1,3 @@
-/* 공통 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,28 +17,55 @@ body {
 }
 
 
-/* 스크롤하면 이미지 스르륵 나오게 */
+/*  우측 배지  */
+#badges {
+  position: fixed;
+  right: 10px;
+  top: 150px;
+}
+#badges img {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+/*  스크롤하면 이미지 스르륵 나오게  */
 .back-to-position {
   opacity: 0;
   transition: 1s;
 }
-.back-to-position.to-right {
-  transform: translateX(-150px); /* 왼쪽에 있어야 오른쪽으로 가지 */
-}
-.back-to-position.to-left {
-  transform: translateX(150px); 
-}
-.show .back-to-position {
-  opacity: 1;
-  transform: translateX(0); 
-}
+.back-to-position.to-right { transform: translateX(-150px); } /* 왼쪽에 있어야 오른쪽으로 가지 */
+.back-to-position.to-left  { transform: translateX(150px); }  /* 마찬가지로 오른쪽에 있어야 왼쪽으로 가지 */
+.show .back-to-position    { transform: translateX(0); opacity: 1; }
 .show .delay-0 { transition-delay: 0s; }
 .show .delay-1 { transition-delay: .3s; }
 .show .delay-2 { transition-delay: .6s; }
 .show .delay-3 { transition-delay: .9s; }
 
 
-/* 버튼 디자인 */
+/*  맨위로가기버튼  */
+#to-top {
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background-color: #333;
+  padding-top: 3px; /* 화살표가 살짝 중간보다 위로 올라가있어서 */
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+/*  버튼 디자인  */
 .btn {
   display: block;
   width: 130px;
@@ -53,36 +79,12 @@ body {
   cursor: pointer;
   transition: .4s;
 }
-.btn:hover,
-.btn.btn--reverse {
-  color: #fff;
-  background-color: #333;
-}
-.btn.btn--reverse:hover {
-  background-color: transparent; /*투명함*/
-  color: #333;
-}
-.btn.btn--brown {
-  color: #592b18;
-  border-color: #592b18;
-}
-.btn.btn--brown:hover {
-  color: #fff;
-  background-color: #592b18;
-}
-.btn.btn--gold {
-  color: #d9aa8a;
-  border-color: #d9aa8a;
-}
-.btn.btn--gold:hover {
-  color: #fff;
-  background-color: #d9aa8a;
-}
-.btn.btn--white {
-  color: #fff;
-  border-color: #fff;
-}
-.btn.btn--white:hover {
-  color: #333;
-  background-color: #fff;
-}
+.btn:hover, 
+.btn.btn--reverse       { color: #fff;    background-color: #333;      }
+.btn.btn--reverse:hover { color: #333;    background-color: transparent; } /* transparent: 투명 */
+.btn.btn--brown         { color: #592b18; border-color: #592b18;       }
+.btn.btn--brown:hover   { color: #fff;    background-color: #592b18;   }
+.btn.btn--gold          { color: #d9aa8a; border-color: #d9aa8a;       }
+.btn.btn--gold:hover    { color: #fff;    background-color: #d9aa8a;   }
+.btn.btn--white         { color: #fff;    border-color: #fff;          }
+.btn.btn--white:hover   { color: #333;    background-color: #fff;      }
