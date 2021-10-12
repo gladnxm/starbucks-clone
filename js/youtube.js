@@ -45,3 +45,5 @@ function floatingObject(selector, delay, range) {
 floatingObject('#youtube .floating:first-of-type', 1, 15);
 floatingObject('#youtube .floating:last-of-type', .5, 15);
 floatingObject('#season-product .floating', 1.5, 20);
+// 3번째 원을 유튜브 섹션에 넣으면 오버플로우 히든때문에 잘리는데 처리가 안됨
+// 그래서 바로 아래의 섹션 시즌프로덕트에 넣음

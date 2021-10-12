@@ -1,4 +1,4 @@
-/* promotion section */
+/*  03 promotion section  */
 #promotion {
   background-color: #f6f5f0;
   padding: 40px 0;
@@ -48,24 +48,26 @@
 }
 
 
-/* 좌우 버튼 */
-#promotion :is(.swiper-prev, .swiper-next) {
+/* 좌우 화살표 버튼 (맨밑 어워즈 섹션까지 공통되는건 여기서) */
+:is(#promotion, #awards) :is(.swiper-prev, .swiper-next) {
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
   width: 42px;
   height: 42px;
-  border: 2px solid #333;
-  color: #333;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  border: 2px solid #333;
+  border-radius: 50%;
   outline: none;
   cursor: pointer;
   transition: .4s;
+}
+#promotion :is(.swiper-prev, .swiper-next) {
+  z-index: 1;
+  color: #333;
   transform: translateY(-20px); 
 }
 #promotion .swiper-prev {
