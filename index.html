@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./css/rewards.css">
   <link rel="stylesheet" href="./css/youtube.css">
   <link rel="stylesheet" href="./css/season_coffee.css">
-  <link rel="stylesheet" href="./css/pick_store.css">
+  <link rel="stylesheet" href="./css/pick_reserve_find.css">
 
   <!-- swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
@@ -29,6 +29,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" 
   integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" 
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" 
+  integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script defer src="./js/youtube.js"></script> 
   <script defer src="./js/main.js"></script> 
   <script defer src="./js/swiper.js"></script> 
@@ -288,40 +292,48 @@
   </section>
   
   <!-- SEASON PRODUCT -->
-  <section id="season-product">
+  <section id="season-product" class="scroll-spy">
     <div class="inner">
       <img src="./images/floating3.png" class="floating" alt="">
-      <img src="./images/season_product_image.png" alt="">
+      <img src="./images/season_product_image.png" class="back-to-position to-right delay-0" alt="">
   
       <div class="text-group">
-        <img src="./images/season_product_text1.png" alt="">
-        <img src="./images/season_product_text2.png" alt="">
-        <a href="#" class="btn">자세히 보기</a>
+        <img src="./images/season_product_text1.png" class="back-to-position to-left delay-1" alt="">
+        <img src="./images/season_product_text2.png" class="back-to-position to-left delay-2" alt="">
+        <div class="back-to-position to-left delay-3">
+          <!-- 백투포지션의 트랜지션이 1초인데 버튼은 .4초니까 겹칠까봐 한차례묶음 -->
+          <a href="#" class="btn">자세히 보기</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- RESERVE COFFEE -->
-  <section id="reserve-coffee">
+  <section id="reserve-coffee" class="scroll-spy">
     <div class="inner">
-      <img src="./images/reserve_logo.png" alt="">
+      <img src="./images/reserve_logo.png" class="back-to-position to-right delay-0" alt="">
   
       <div class="text-group">
-        <img src="./images/reserve_text.png" alt="">
-        <a href="#" class="btn btn--gold">자세히 보기</a>
+        <img src="./images/reserve_text.png" class="back-to-position to-right delay-1" alt="">
+        <div class="back-to-position to-right delay-2">
+          <a href="#" class="btn btn--gold">자세히 보기</a>
+        </div>
       </div>
   
-      <img src="./images/reserve_image.png" alt="">
+      <img src="./images/reserve_image.png" class="back-to-position to-left delay-3" alt="">
     </div>
   </section>
 
   <!-- PICK YOUR FAVORITE -->
-  <section id="pick-your-favorite">
+  <section id="pick-your-favorite" class="scroll-spy">
     <div class="inner">
       <div class="text-group">
-        <img src="./images/favorite_text1.png" alt="">
-        <img src="./images/favorite_text2.png" alt="">
-        <a href="#" class="btn btn--white">자세히 보기</a>
+        <img src="./images/favorite_text1.png" class="back-to-position to-right delay-0" alt="">
+        <img src="./images/favorite_text2.png" class="back-to-position to-right delay-1" alt="">
+        <div class="back-to-position to-right delay-2">
+          <a href="#" class="btn btn--white">자세히 보기</a>
+          <!-- 백투포지션의 트랜지션이 1초인데 버튼은 .4초니까 겹칠까봐 한차례묶음 -->
+        </div>
       </div>
     </div>
   </section>
@@ -335,10 +347,28 @@
 
       <div class="back">
         <img src="./images/reserve_store_medal_back.png" alt="">
-        <a href="#" class="btn">매장 안내</a>
+        <a href="#" class="btn">매장 보기</a>
       </div>
     </div>
   </section>
   
+  <!-- FIND STORE -->
+  <section id="find-store" class="scroll-spy">
+    <div class="inner">
+      <img src="./images/find_store_picture1.jpg" class="picture picture1 back-to-position to-right delay-0" alt="">
+      <img src="./images/find_store_picture2.jpg" class="picture picture2 back-to-position to-right delay-1" alt="">
+      <img src="./images/find_store_texture1.png" class="texture texture1" alt="">
+      <img src="./images/find_store_texture2.png" class="texture texture2" alt="">
+  
+      <div class="text-group">
+        <img src="./images/find_store_text1.png" class="back-to-position to-left delay-0" alt="">
+        <img src="./images/find_store_text2.png" class="back-to-position to-left delay-1" alt="">
+        <div class="back-to-position to-left delay-2"> 
+          <!-- 백투포지션의 트랜지션이 1초인데 버튼은 .4초니까 겹칠까봐 한차례묶음 -->
+          <a href="#" class="btn">매장 찾기</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

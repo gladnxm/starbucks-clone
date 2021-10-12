@@ -19,7 +19,7 @@ function onYouTubeIframeAPIReady() { // 라이브러리 내장함수라 이름�
 }
 
 
-// 동그라미3개 애니메이션 
+// 유튜브영역 동그라미3개 애니메이션 
 function random(min, max) { 
   /*
     범위 랜덤 함수(소수점 2자리까지)

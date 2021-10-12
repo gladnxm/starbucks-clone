@@ -60,3 +60,16 @@ toggleIcon.addEventListener('click', function() {
     toggleIcon.textContent = 'upload';
   }
 });
+
+
+// 화면에 보이면 스르륵 나오게
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl,
+      triggerHook: .8
+    })
+    .setClassToggle(spyEl, 'show')// 토글할요소와 클래스이름
+    .addTo(new ScrollMagic.Controller());
+});

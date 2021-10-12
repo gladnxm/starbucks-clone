@@ -2,18 +2,10 @@
   height: 240px;
   display: flex;
 }
-#rewards :is(.bg-left, .bg-right, .btn:last-child) {
-  flex-grow: 1;
-}
-#rewards .bg-left {
-  background-color: #272727;
-}
-#rewards .bg-right {
-  background-color: #d5c798;
-}
-#rewards .inner {
-  background-image: url('/images/rewards.jpg');
-}
+#rewards :is(.bg-left, .bg-right, .btn:last-child) { flex-grow: 1; }
+#rewards .bg-left   { background-color: #272727; }
+#rewards .bg-right  { background-color: #d5c798; }
+#rewards .inner     { background-image: url('/images/rewards.jpg'); }
 #rewards .btn-group {
   width: 250px;
   display: flex;
@@ -23,6 +15,4 @@
   right: 15px;
   bottom: 25px;
 }
-#rewards .btn:nth-child(2) {
-  width: 110px;
-}
+#rewards .btn:nth-child(2) { width: 110px; }
