@@ -61,7 +61,7 @@
   align-items: center;
   border: 2px solid #333;
   /* head에서 promotion파일이 section파일보다 
-     아래에 있으면 awards의 보더색을 덮어버림 */
+     아래에 있으면 awards의 좌우버튼 보더색을 덮어버림 */
   border-radius: 50%;
   outline: none;
   cursor: pointer;
