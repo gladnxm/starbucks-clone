@@ -62,20 +62,37 @@
   height: 240px;
   display: flex;
 }
-#rewards :is(.bg-left, .bg-right, .btn:last-child) { flex-grow: 1; }
-#rewards .bg-left   { background-color: #272727; }
-#rewards .bg-right  { background-color: #d5c798; }
-#rewards .inner     { background-image: url('/images/rewards.jpg'); }
+#rewards .inner { 
+  background-image: url('/images/rewards.jpg'); 
+}
+#rewards::before, 
+#rewards::after { 
+  /* #rewards :is(::before, ::after) 로는 안됨 */
+  content: "";
+  display: block;
+  flex-grow: 1; 
+}
+#rewards::before {
+  background-color: #272727;
+}
+#rewards::after {
+  background-color: #d5c798;
+}
 #rewards .btn-group {
   width: 250px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   position: absolute;
-  right: 15px;
+  right: 10px;
   bottom: 25px;
 }
-#rewards .btn:nth-child(2) { width: 110px; }
+#rewards .btn:nth-child(2) { 
+  width: 110px; 
+}
+#rewards .btn:last-child { 
+  flex-grow: 1; 
+}
 
 
 /*  05 youtube  */
